@@ -68,6 +68,12 @@ export class AppComponent implements OnInit{
   public sixthOccs: {};
   public stringOcc: string;
 
+  // Differences
+  public firstDiffs = [];
+  public secondDiffs = [];
+  public thirdDiffs = [];
+  public fourthDiffs = [];
+
   public totalsArr = [];
   public percentArr = [];
 
@@ -89,8 +95,13 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.todaysLuckies = this.createIt();
     this.combinedArrs = updated;
-    this.viewArr = this.createNewIndivdiualSet(this.combinedArrs, 5);  
+    // this.viewArr = this.createNewIndivdiualSet(this.combinedArrs, 5);  
 
+    this.combinedArrs.forEach(arrSet => {
+      this.thirdDiffs.push( this.getDiff(arrSet, 3, 2) );
+      this.fourthDiffs.push( this.getDiff(arrSet, 4, 3) );      
+    });
+    
     // let x = document.getElementById('ta');
     // let numbObj = JSON.parse(numbs);
         
@@ -290,6 +301,9 @@ export class AppComponent implements OnInit{
     console.log('outside of while', this.randodArr);
   }
   
+  getDiff(arr: any[], b, a): number {
+    return arr[b] - arr[a];
+  }
 
   
 }

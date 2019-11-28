@@ -45,7 +45,7 @@ export class OccGraphComponent implements OnInit {
       },
       yAxis: {
         min: 0,
-        max: 180,
+        max: 20,
         title: {
           text: 'Possible numbers'
         }
@@ -57,30 +57,42 @@ export class OccGraphComponent implements OnInit {
           borderWidth: 0
         }
       },
-      series: [        
+      series: [              
         {
-          name: 'highest',
-          data: [40, 59, 66, 68, 70, 25],
+          name: 'fifth digit',
+          data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,1,2,2,3,2,2,2,1,4,4,4,1,4,2,1,3,3,8,8,10,6,6,11,7,10,5,10,11,13,10,17],
+          pointPadding: 0.05,
+          color: '#E14A38'
+        },
+        {
+          name: 'fourth digit',
+          data: [0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,1,2,0,1,2,0,3,1,0,2,1,1,1,2,4,5,2,2,1,2,7,1,3,2,10,8,5,1,7,4,9,7,2,1,2,4,8,1,8,3,2,5,7,6,10,2,6,6,3,2,2],
           pointPadding: 0.1,
-          color: 'rgba(255,128,85,1)'
+          color: '#CE986A'
         }
-        // ,{
-        //   name: 'modes',
-        //   data: [1,17,39,42,70,9],
-        //   pointPadding: 0.2,
-        //   color: 'rgba(128,255,85,1)'
-        // }
-        // ,{
-        //   name: 'lowest',
-        //   data: [1, 2, 4, 8, 18, 1],
-        //   pointPadding: 0.3,
-        //   color: 'rgba(128,85,255,1)'
-        // }
+        ,{
+          name: 'third digit',
+          data: [0,0,0,1,1,0,0,0,0,1,2,1,2,2,3,1,0,3,1,3,4,4,5,2,4,4,3,5,4,7,10,6,3,5,2,3,6,3,11,7,5,5,3,4,2,4,5,3,2,0,4,2,4,1,3,1,2,4,0,1,3,1,1,0,0,1],
+          pointPadding: 0.12,
+          color: '#9FDFC7'
+        }        
+        ,{
+          name: 'second digit',
+          data: [0, 2, 2, 2, 2, 4, 3, 3, 2, 6, 4, 5, 5, 7, 5, 8, 9, 3, 3, 3, 1, 9, 4, 8, 5, 5, 0, 8, 6, 6, 3, 4, 5, 6, 2, 3, 5, 6, 0, 1, 3, 2, 1, 1, 2, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+          pointPadding: 0.14,
+          color: '#2DC1B7'
+        }
+        , {
+          name: 'first digit',
+          data: [20, 14, 13, 12, 7, 5, 8, 11, 5, 13, 7, 5, 4, 9, 4, 6, 5, 2, 1, 3, 3, 1, 1, 3, 2, 0, 1, 5, 3, 0, 1, 0, 2, 2, 0, 0, 0, 0, 1, 1],
+          pointPadding: 0.16,
+          color: '#393D2C'
+        }
         
       ]
     }   
     
-    Highcharts.chart('container', this.options);
+    Highcharts.chart('occs', this.options);
   }
 
 }
