@@ -1,132 +1,79 @@
-<!-- <h2>Goal array: {{ goalArr }}</h2>
-<button (click)="calcArrs()">Make new numbers</button>
-<br>
-<p>New numbers: {{ randodArr }}</p>
-<p>JSON Stringified Goal: {{ strungDis }}</p>
-<p>All of the first digits frequency(?): </p><strong>{{ calcdTotals }}</strong>
-<br>
-<p>Percent of frequency: </p><strong>{{ calcdPercs }}</strong> -->
-<diff-graph></diff-graph>
-<occ-graph></occ-graph>
-<high-chart></high-chart>
-<div class="flexes none">
-  <div class="largest-flex">
-    <h3>Smallest numbers</h3>
-    <div>
-      <strong>first Set</strong>
-      <p>{{ firstSmallest }}</p>
-    </div>
-    <div>
-      <strong>second Set</strong>
-      <p>{{ secondSmallest }}</p>
-    </div>
-    <div>
-      <strong>third Set</strong>
-      <p>{{ thirdSmallest }}</p>
-    </div>
-    <div>
-      <strong>fourth Set</strong>
-      <p>{{ fourthSmallest }}</p>
-    </div>
-    <div>
-      <strong>fifth Set</strong>
-      <p>{{ fifthSmallest }}</p>
-    </div>
-    <div>
-      <strong>sixth Set</strong>
-      <p>{{ sixthSmallest }}</p>
-    </div>
+<header class="flexor">
+  <div class="circle bold">
+    <span class="off-kilter">The</span>
   </div>
+  <div class="circle bold">L</div>
+  <div class="circle bold">O</div>
+  <div class="circle bold">T</div>
+  <div class="circle bold">T</div>
+  <div class="circle bold">O</div>
+</header>
 
-  <div class="largest-flex">
-    <h3>Largest numbers</h3>
-    <div>
-      <strong>first Set</strong>
-      <p>{{ firstLargest }}</p>
-    </div>
-    <div>
-      <strong>second Set</strong>
-      <p>{{ secondLargest }}</p>
-    </div>
-    <div>
-      <strong>third Set</strong>
-      <p>{{ thirdLargest }}</p>
-    </div>
-    <div>
-      <strong>fourth Set</strong>
-      <p>{{ fourthLargest }}</p>
-    </div>
-    <div>
-      <strong>fifth Set</strong>
-      <p>{{ fifthLargest }}</p>
-    </div>
-    <div>
-      <strong>sixth Set</strong>
-      <p>{{ sixthLargest }}</p>
-    </div>
+<section class="the-info">
+  <div class="rules">
+    <h2>The Rules of the game.</h2>
+    <p>
+      The first five digits can be an unique number between 1 and 70.    
+    </p>
+    <p>
+      The last number is a digit between 1 and 25 and does not have to be unique to the previous five numbers.
+    </p>
   </div>
-
-  <div class="largest-flex">
-    <h3>Modes</h3>
-    <div>
-      <strong>first mode</strong>
-      <p>{{ firstMode }}</p>
-    </div>
-    <div>
-      <strong>second mode</strong>
-      <p>{{ secondMode }}</p>
-    </div>
-    <div>
-      <strong>third mode</strong>
-      <p>{{ thirdMode }}</p>
-    </div>
-    <div>
-      <strong>fourth mode</strong>
-      <p>{{ fourthMode }}</p>
-    </div>
-    <div>
-      <strong>fifth mode</strong>
-      <p>{{ fifthMode }}</p>
-    </div>
-    <div>
-      <strong>sixth mode</strong>
-      <p>{{ sixthMode }}</p>
-    </div>
+  <div class="the-why">
+    <h3>If I were wise I'd see a trend.</h3>
+    <p>
+      Currently the odds for winning this lottery are 302,575,350 to 1. Creating a JS function to create an array populated with Math.random() numbers with the rules above should lead to roughly those same odds.
+    </p>
+    <p>
+      These charts and graphs are meant to visualize the past winning sets to see if there's any sort of correlation in them.
+    </p>      
+    <p>
+      The purpose isn't to write a function that merely gives you an array exactly equal to one of the winning sets, but to write a more general function that takes significantly fewer than 300,000,000 tries to match a given winning set. Ideally, any function that can consistently match a winning set within a few hundred tries is hopefully also spitting out future winning sets and possibly evening the odds of winning.
+    </p>        
   </div>
-</div>
-<!-- <div class="binder">
-  <div class="staple">
-    <graph-box [someGraph]="allNumbs.firstDigits" color="red"></graph-box>
-  </div>
-  <div class="staple">
-    <graph-box [someGraph]="allNumbs.secondDigits" color="orange"></graph-box>
-  </div>
-  <div class="staple">
-    <graph-box [someGraph]="allNumbs.thirdDigits" color="yellow"></graph-box>
-  </div>
-  <div class="staple">
-    <graph-box [someGraph]="allNumbs.fourthDigits" color="green"></graph-box>
-  </div>
-  <div class="staple">
-    <graph-box [someGraph]="allNumbs.fifthDigits" color="blue"></graph-box>
-  </div>
-  <div class="staple">
-    <graph-box [someGraph]="allNumbs.sixthDigits" color="purple"></graph-box>
-  </div>
-</div>
-
-<section class="none">
-  <div id="help" *ngFor="let ti of trashIter">  
-    <span class="date">{{ ti[0] | date:'MM/dd/yyyy' }}: </span>
-    <span class="one">{{ ti[1] }}, </span>
-    <span class="two">{{ ti[2] }}, </span>
-    <span class="three">{{ ti[3] }}, </span>
-    <span class="four">{{ ti[4] }}, </span>
-    <span class="five">{{ ti[5] }}, </span>
-    <span class="six">{{ ti[6] }}</span>
+  <div class="the-where">
+    <h3>Progress</h3>
+    <p>
+      So far, no attempt has yet been made here to write such a function using the given data as I feel there are too few relationships visualized, for now, to come up with a meaningful function.
+    </p>
+    <p>
+      As is, the below charts are merely a few relationships that I felt were worth looking into.
+    </p>
   </div>
 </section>
-<br> -->
-<!-- <textarea name="" id="ta" cols="40" rows="40">
 
-</textarea> -->
+<section class="highs-lows-modes hchart">
+  <div class="chart-desc">
+    <h4>Highs, Lows, and Modes</h4>
+    <p>
+      The simplest one is used to find the lowest, highest, and most frequent number found in a given index of a winning set.
+    </p>
+    <p>
+      This should help us, even if just a little, narrow the range of what value a particular index should be.
+    </p>
+  </div>
+  <high-chart chart="hlm" [options]="highsLowsModesOpts"></high-chart>
+</section>
+
+<section class="occurences hchart">
+  <div class="chart-desc">
+    <h4>How many times do we even see that number?</h4>
+    <p>
+      Even though we may already of the mode, it may be helpful to know what other numbers like to frequently show themselves.
+    </p>    
+  </div>
+  <high-chart chart="occs" [options]="occsOpts"></high-chart>
+</section>
+
+<section class="differences hchart">
+  <div class="chart-desc">
+    <h4>arr[4] - arr[3], arr[3] - arr[2], and so on...</h4>
+    <p>
+      I have no idea if finding the differences between to neighboring indices is actually useful. 
+    </p>
+    <p>
+      But, it does show that the first two numbers in a set probably shouldn't be more than 53 numbers apart.
+    </p>    
+  </div>
+  <high-chart chart="diffs" [options]="diffOpts"></high-chart>
+</section>

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Catamaran', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, orange 2%, yellow 4%, white 6%, white 94%, yellow 96%, orange 98%);
+    max-width: 100vw;
+    overflow-x: hidden;
+}
